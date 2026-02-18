@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이범석 이력서 - Android Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700;900&family=Urbanist:wght@600;800&display=swap');
+        
+        :root {
+            --primary: #0f172a;
+            --accent: #3b82f6;
+            --text-main: #1e293b;
+            --text-light: #64748b;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #f1f5f9;
+            color: var(--text-main);
+            margin: 0;
+            padding: 40px 0;
+        }
+
+        /* A4 비율의 페이지 설정 */
+        .resume-page {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            display: flex;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .left-sidebar {
+            width: 32%;
+            background-color: var(--primary);
+            color: white;
+            padding: 40px 30px;
+        }
+
+        .main-content {
+            width: 68%;
+            padding: 40px 45px;
+        }
+
+        h1 { font-family: 'Urbanist', sans-serif; }
+        .section-title {
+            font-weight: 900;
+            font-size: 1.1rem;
+            color: var(--primary);
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 8px;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sidebar-title {
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            margin-top: 30px;
+        }
+
+        .skill-tag {
+            background: rgba(255,255,255,0.1);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            margin-bottom: 6px;
+            display: inline-block;
+        }
+
+        .experience-item { margin-bottom: 24px; }
+        .project-bullet { position: relative; padding-left: 18px; margin-bottom: 6px; font-size: 0.9rem; line-height: 1.5; color: #334155; }
+        .project-bullet::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        @media print {
+            body { background: white; padding: 0; }
+            .resume-page { box-shadow: none; margin: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="resume-page">
+        <!-- Sidebar -->
+        <div class="left-sidebar">
+            <div class="mb-10 text-center">
+                <h1 class="text-4xl font-extrabold mb-1 tracking-tight">이범석</h1>
+                <p class="text-blue-400 font-semibold text-sm">Android Engineer</p>
+            </div>
+
+            <div class="sidebar-title">Contact</div>
+            <div class="space-y-2 text-xs text-slate-300">
+                <p>📍 서울특별시</p>
+                <p>📞 010-2869-3713</p>
+                <p>📧 w99911@gmail.com</p>
+                <p>🔗 <a href="https://github.com/YiBeomSeok" class="hover:text-white">github.com/YiBeomSeok</a></p>
+                <p>🔗 <a href="https://linkedin.com/in/yibeomseok" class="hover:text-white">linkedin.com/in/yibeomseok</a></p>
+            </div>
+
+            <div class="sidebar-title">Main Stack</div>
+            <div class="flex flex-wrap gap-1">
+                <span class="skill-tag">Kotlin</span>
+                <span class="skill-tag">C++ (NDK/JNI)</span>
+                <span class="skill-tag">Java</span>
+                <span class="skill-tag">Camera2 API</span>
+                <span class="skill-tag">Jetpack Compose</span>
+                <span class="skill-tag">Coroutines & Flow</span>
+                <span class="skill-tag">Hilt (DI)</span>
+                <span class="skill-tag">Multi-module</span>
+                <span class="skill-tag">Clean Architecture</span>
+            </div>
+
+            <div class="sidebar-title">ML & Vision</div>
+            <div class="flex flex-wrap gap-1">
+                <span class="skill-tag">TFLite</span>
+                <span class="skill-tag">ML Kit</span>
+                <span class="skill-tag">MediaPipe</span>
+                <span class="skill-tag">OpenCV</span>
+                <span class="skill-tag">libyuv</span>
+            </div>
+
+            <div class="sidebar-title">Tools & Others</div>
+            <div class="flex flex-wrap gap-1 text-slate-300">
+                <span class="skill-tag">Gradle KTS</span>
+                <span class="skill-tag">GitHub Actions</span>
+                <span class="skill-tag">Fastlane</span>
+                <span class="skill-tag">JUnit 5 & Kotest</span>
+                <span class="skill-tag">Detekt</span>
+            </div>
+
+            <div class="sidebar-title">Education</div>
+            <div class="text-xs space-y-3 text-slate-300">
+                <div>
+                    <p class="font-bold text-white">세종대학교 졸업</p>
+                    <p>물리천문학 전공</p>
+                    <p class="opacity-70">2017.03 - 2023.08</p>
+                </div>
+                <div>
+                    <p class="font-bold text-white">세종대학교 복수전공</p>
+                    <p>컴퓨터공학 전공</p>
+                    <p class="opacity-70">2018.03 - 2023.08</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <section class="mb-8">
+                <div class="section-title">SUMMARY</div>
+                <p class="text-sm leading-relaxed text-slate-600">
+                    <strong class="text-slate-800">카메라 파이프라인 설계 및 SDK 아키텍처에 특화된 3년 차 안드로이드 개발자</strong>입니다. 헬스케어 스타트업 '딥메디'의 안드로이드 팀 리드로서, 40개 이상의 멀티모듈로 구성된 생체신호 측정 SDK와 B2B 앱의 전 과정을 리드해 왔습니다. <br><br>
+                    단순 기능 구현을 넘어 <span class="text-blue-600 font-semibold">Camera2 API 기반 실시간 영상 처리 최적화</span>와 <span class="text-blue-600 font-semibold">JNI/NDK를 활용한 네이티브 레벨의 문제 해결</span>에 강점이 있습니다. 팀 내 최다 기여자(1,300+ 커밋)로서 책임감 있는 개발과 기술적 의사결정을 중요하게 생각합니다.
+                </p>
+            </section>
+
+            <section class="mb-8">
+                <div class="section-title">EXPERIENCE</div>
+                
+                <div class="experience-item">
+                    <div class="flex justify-between items-start mb-1">
+                        <div>
+                            <h3 class="font-bold text-lg">딥메디 (DeepMedi)</h3>
+                            <p class="text-blue-600 font-bold text-sm">Android Team Lead / Engineer</p>
+                        </div>
+                        <span class="text-xs font-bold text-slate-400 mt-1">2024.01 - 현재</span>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <h4 class="font-bold text-sm text-slate-700 mb-2">1. 생체신호 측정 SDK 개발 (deepmediTools)</h4>
+                        <p class="text-xs text-slate-500 mb-3 italic">스마트폰 카메라 기반 PPG 신호 추출 SDK (40+ 서브모듈, Maven 배포)</p>
+                        <div class="space-y-1">
+                            <p class="project-bullet"><strong>Camera2 파이프라인 재설계:</strong> 다중 입력 소스(얼굴/손가락/USB)를 단일 추상화 계층으로 통합한 카메라 코어 아키텍처 구축</p>
+                            <p class="project-bullet"><strong>ML 프레임워크 독립성 확보:</strong> 특정 라이브러리에 의존하지 않는 순수 Kotlin 기반 얼굴 검출 추상화 계층 설계 (ML Kit, MediaPipe 교체 가능)</p>
+                            <p class="project-bullet"><strong>Native 성능 최적화:</strong> JNI 레이어의 Race Condition 분석 및 해결, libyuv를 활용한 YUV to RGB 변환 효율 극대화</p>
+                            <p class="project-bullet"><strong>성능 모니터링:</strong> Jitter, Throughput, Data Quality 측정을 위한 실시간 분석 시스템 설계 및 구현</p>
+                            <p class="project-bullet"><strong>리더십:</strong> SDK 전체 최다 기여자(1,000+ 커밋), 350+ PR 리뷰 및 30개 이상의 프로덕션 버전 릴리스 관리</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-6">
+                        <h4 class="font-bold text-sm text-slate-700 mb-2">2. B2B 건강측정 앱 개발 (CareUp)</h4>
+                        <p class="text-xs text-slate-500 mb-3 italic">Clean Architecture 기반 20+ 모듈 멀티모듈 프로젝트</p>
+                        <div class="space-y-1">
+                            <p class="project-bullet"><strong>도메인 레이어 리팩토링:</strong> 불필요한 추상화(Policy) 제거 및 UseCase 중심 설계를 통해 코드 가독성 및 유지보수성 향상</p>
+                            <p class="project-bullet"><strong>관측성 모듈 통합:</strong> API-구현 분리 구조의 Observability 모듈 설계로 Crashlytics/Analytics 통합 관리 체계 구축</p>
+                            <p class="project-bullet"><strong>데이터 파이프라인:</strong> 생체신호 데이터(RGB, RR interval) CSV 수집 및 업로드 로직 구현으로 알고리즘 분석 기반 마련</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="section-title">ACTIVITIES & AWARDS</div>
+                <div class="space-y-4">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="font-bold text-sm text-slate-800">NextStep 교육 이수</p>
+                            <p class="text-xs text-slate-500">TDD 클린 코드 with Kotlin / 학습 테스트로 배우는 Compose</p>
+                        </div>
+                        <span class="text-xs text-slate-400">2023 - 2024</span>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="font-bold text-sm text-slate-800">세종대학교 제13회 창의설계경진대회 금상</p>
+                            <p class="text-xs text-slate-500">실생활 문제 해결을 위한 소프트웨어 아키텍처 제안</p>
+                        </div>
+                        <span class="text-xs text-slate-400">2022.08</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mt-10">
+                <div class="p-4 bg-slate-50 border-l-4 border-blue-500 rounded-r-md">
+                    <p class="text-xs font-bold text-blue-600 mb-1">Motto</p>
+                    <p class="text-sm italic text-slate-600 font-medium">"구조적 문제 해결에 집중하여 지속 가능한 코드를 만들고, 데이터로 품질을 증명합니다."</p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+</body>
+</html>
